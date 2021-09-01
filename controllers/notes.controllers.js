@@ -48,10 +48,7 @@ ctrlNotes.route4DeleteLogic = async (req, res) =>{
     const {id} = req.body;
     const note = await Note.findByIdAndUpdate(id, {active: false}, {new: true});
 
-    res.json({
-        message: 'Note deleted succesfuly!',
-        note
-    });
+    res.json({message: 'Note deleted succesfuly!!!'}, note);
 }
 
 module.exports = ctrlNotes;
